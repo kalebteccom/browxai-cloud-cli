@@ -7,7 +7,7 @@ No public CLI release is available yet. Releases appear here only after artifact
 verification, third-party notices, and platform signing checks pass.
 
 - Product and beta access: https://cloud.browxai.com/
-- Software license: https://cloud.browxai.com/legal/software-license
+- Software license: https://cloud.browxai.com/legal/license
 - Privacy: https://cloud.browxai.com/legal/privacy
 - Support: hello@kalebtec.com
 
