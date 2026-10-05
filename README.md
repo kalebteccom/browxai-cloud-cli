@@ -3,16 +3,32 @@
 Official binary distribution channel for the Browxai Cloud connector.
 The application source is private. This repository does not grant an open-source license.
 
-No public CLI release is available yet. Releases appear here only after artifact
-verification, third-party notices, and platform signing checks pass. The public
-verification key is configured; release artifacts still need to be built and signed.
+Current release: v0.1.0. Each release is a set of Linux archives (x86_64 and
+aarch64, glibc 2.36 or newer), `install.sh`, `release-manifest.json`, `SHA256SUMS`
+and `SHA256SUMS.minisig`. Every archive was built locally and its build is recorded
+in `release-manifest.json`.
 
-The macOS beta will use Minisign-verified downloads and an ad-hoc code signature,
-not Apple Developer ID signing or notarization. OS security policy may still block
-execution. This connector does not grant desktop permissions or replace browxai's
-macOS permission-bearing application.
+Launch downloads are Linux-only. macOS archives are held until Developer ID signing
+and notarization are available, and Windows is not available. This connector does
+not grant desktop permissions or replace browxai's macOS permission-bearing
+application.
 
-- Product and beta access: https://cloud.browxai.com/
+Install:
+
+```sh
+curl --proto '=https' --tlsv1.2 -fsSLO https://github.com/kalebteccom/browxai-cloud-cli/releases/download/v0.1.0/install.sh
+less install.sh
+sh install.sh
+```
+
+The installer needs `minisign` and `curl`. It installs to `~/.browxai/bin` and
+does not change your PATH. Then run `browxai-cloud --version`.
+
+This software uses standard TLS and DTLS-SRTP encryption. It is provided as part
+of the Browxai Cloud service and may not be used or downloaded in breach of EU or
+applicable sanctions and export laws.
+
+- Product and access: https://cloud.browxai.com/
 - Software license: https://cloud.browxai.com/legal/license
 - Privacy: https://cloud.browxai.com/legal/privacy
 - Support: hello@kalebtec.com
